@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { AccountDetailCardComponent } from './account-detail-card/account-detail-card.component';
 import { UserProfileCardComponent } from './user-profile-card/user-profile-card.component';
-
+import { TransactionHistoryListComponent } from './transaction-history-list/transaction-history-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { UserProfileCardComponent } from './user-profile-card/user-profile-card.
     HeaderComponent,
     NotFoundComponent,
     AccountDetailCardComponent,
-    UserProfileCardComponent
+    UserProfileCardComponent,
+    TransactionHistoryListComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,8 @@ import { UserProfileCardComponent } from './user-profile-card/user-profile-card.
     HeaderComponent,
     NotFoundComponent,
     AccountDetailCardComponent,
-    UserProfileCardComponent
+    UserProfileCardComponent,
+    TransactionHistoryListComponent
   ]
 })
 export class SharedModule { }

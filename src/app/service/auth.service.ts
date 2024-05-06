@@ -24,6 +24,10 @@ export class AuthService {
     return this.http.get<any>(`${this.baseUrl}/users/me`);
   }
 
+  updateUserProfile(payload: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/users/update`, payload);
+  }
+
   isLoggedIn() {
     const token = localStorage.getItem(this.authtokenName);
     if (token) {

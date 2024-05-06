@@ -5,6 +5,7 @@ import { AccountRoutingModule } from './account-routing.module';
 import { DepositComponent } from './deposit/deposit.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
   ],
   imports: [
     CommonModule,
-    AccountRoutingModule
+    AccountRoutingModule,
+    SharedModule
   ]
 })
 export class AccountModule { }
