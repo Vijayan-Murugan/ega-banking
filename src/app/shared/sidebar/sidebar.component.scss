@@ -1,0 +1,60 @@
+.sidebar-wrapper {
+  background-color: #7c61c8 !important;
+}
+
+.togglebtnwrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  right: 0;
+  width: fit-content;
+  padding: 10px;
+}
+
+
+
+.togglebtnwrapper>button {
+  margin: 0;
+}
+
+.hide-logo {
+  display: none;
+}
+
+.sidebar {
+  overflow: hidden;
+  transition: all 0.3s;
+  background-color: rgb(247, 246, 251);
+  padding: 10px 50px 10px 10px;
+}
+
+.removepadding {
+  padding: 3px;
+}
+
+.toggle-button {
+  display: block;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.toggle-button:hover {
+  background-color: #843cbc;
+}
+
+
+
+.sidebar-link {
+  padding: 10px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.active-link {
+  color: white;
+  background-color: #843cbc;
+}

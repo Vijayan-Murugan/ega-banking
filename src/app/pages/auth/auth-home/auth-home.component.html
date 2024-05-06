@@ -1,0 +1,26 @@
+
+
+  <main class="grid min-h-screen place-items-center bg-gray-100 px-6 py-24 sm:py-32 lg:px-8">
+    <div class="text-center">
+
+      <div class="p-4">
+        <h1 class="text-black text-4xl sm:text-5xl md:text-6xl font-semibold mb-4">
+          <i class="fa fa-university mr-5 text-purple-800 " aria-hidden="true"></i>
+          EGA Banking
+        </h1>
+        <p class="text-slate-800 text-lg sm:text-xl mb-4">Your One-Stop Solution for Banking Needs</p>
+        <div *ngIf="!authService.isLoggedIn()">
+          <button class="bg-purple-600 text-white px-4 py-2 rounded shadow-md font-semibold" routerLink="/auth/register">
+            Register
+          </button>
+        </div>
+
+        <div *ngIf="authService.isLoggedIn()">
+          <button class="bg-purple-600 text-white px-4 py-2 rounded shadow-md text-sm font-semibold"
+            routerLink="/dashboard">
+            Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>

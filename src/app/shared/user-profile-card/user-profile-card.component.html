@@ -1,0 +1,15 @@
+<div class="w-full bg-gradient-to-r from-purple-500 to-purple-800 rounded-lg shadow-lg p-6 text-white">
+    <h2 class="text-2xl font-semibold mb-6">Hi, {{ userProfileData?.firstName +'' + userProfileData?.lastName}}</h2>
+  
+    <div class="mb-4 flex items-center">
+      <i class="fas fa-phone  mr-2"></i>
+      <label class="text-sm font-semibold">Phone Number:</label>
+      <span class="ml-2 text-sm font-semibold">{{ userProfileData?.phoneNumber }}</span>
+    </div>
+  
+    <div class="mb-4 flex items-center">
+      <i class="fas fa-envelope  mr-2"></i>
+      <label class="text-sm font-semibold">Email:</label>
+      <span class="ml-2 text-sm font-semibold">{{ userProfileData?.email }}</span>
+    </div>
+  </div>

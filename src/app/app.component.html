@@ -1,0 +1,12 @@
+<div class="content-wrapper ">
+  <div class="left-pannel">
+    <app-sidebar />
+  </div>
+  <div class="right-pannel bg-[#edf2f9]">
+    <app-header />
+    <div [ngClass]="{'p-[5px] md:p-2': !isAuthRoute }"
+      [ngStyle]="!isAuthRoute?{'display':'flex','flex':'1','width':'100%'}:{}">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
