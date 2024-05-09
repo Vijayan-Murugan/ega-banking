@@ -8,7 +8,8 @@ export const requestInterceptor: HttpInterceptorFn = (req, next) => {
   const authToken = localStorage.getItem(environment.tokenKey);
   const authReq = req.clone({
     setHeaders: {
-      Authorization:`${authToken?'Bearer '+authToken:''}`
+      Authorization:`${authToken?'Bearer '+authToken:''}`,
+      "Strict-Transport-Security":"max-age=31536000; includeSubdomains"
     },
   });
   const router = inject(Router);
