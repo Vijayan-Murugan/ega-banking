@@ -43,7 +43,8 @@ export class RegisterComponent implements OnInit{
       email: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', [Validators.required]],
+      confirmPassword: ['', [Validators.required,Validators.min(4),Validators.minLength(4)]],
+      pin:['', Validators.required],
       // Add other form controls if needed
     }, { 
 

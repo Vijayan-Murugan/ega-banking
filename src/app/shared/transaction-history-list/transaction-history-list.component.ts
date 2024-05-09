@@ -39,15 +39,15 @@ export class TransactionHistoryListComponent implements OnInit {
   }
 
   getTransactionStatus(transaction: any): string {
-    if (transaction.transaction_type === 'Fund Transfer') {
+    if (transaction.transactionType === 'Fund Transfer') {
       if (transaction.sourceAccountNumber === this.userAccountNumber) {
         return 'Transfer';
       } else if (transaction.targetAccountNumber === this.userAccountNumber) {
         return 'Credited';
       }
-    } else if (transaction.transaction_type === 'Withdrawal') {
+    } else if (transaction.transactionType === 'CASH_WITHDRAWAL') {
       return 'Withdraw';
-    } else if (transaction.transaction_type === 'Deposit') {
+    } else if (transaction.transactionType === 'CASH_DEPOSIT') {
       return 'Deposited';
     }
     return 'N/A'; // If no conditions are met, return 'N/A' for other types of transactions

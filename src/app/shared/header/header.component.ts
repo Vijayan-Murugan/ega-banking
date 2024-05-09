@@ -7,8 +7,16 @@ import { AuthService } from '../../service/auth.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  constructor(private authService: AuthService) { }
+  isLoginPage: boolean = false;
 
+  constructor(private authService: AuthService) {
+    const route = window.location.href || '';
+    if(route.includes('login')) {
+      this.isLoginPage = true;
+    }else {
+      this.isLoginPage = false;
+    }
+   }
   isLoggedIn() {
     return this.authService.isLoggedIn();
   }

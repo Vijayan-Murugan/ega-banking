@@ -8,7 +8,7 @@ import { ApiService } from '../../service/api.service';
 })
 export class AccountDetailCardComponent {
 
-  accountDetails: any;
+  accountDetails: any; // isted of any we can have  interfae model
 
   constructor(private apiService: ApiService , 
     // private _toastService: ToastService 
@@ -21,7 +21,7 @@ export class AccountDetailCardComponent {
   getAccountDetails(): void {
     this.apiService.getAccountDetails().subscribe(
       (data: any) => {
-        this.accountDetails = data;
+        this.accountDetails = data?.account;
       },
       (error: any) => {
        //  this._toastService.error("Error fetching account details")

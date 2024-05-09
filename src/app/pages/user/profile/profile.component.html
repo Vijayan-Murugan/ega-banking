@@ -24,29 +24,29 @@
 
             <div>
                 <label class="text-gray-600 font-semibold">Account Number:</label>
-                <span class="text-gray-800 block">{{ userProfile?.accountNumber }}</span>
+                <span class="text-gray-800 block">{{ userProfile?.account?.accountNumber }}</span>
             </div>
 
             <div>
                 <label class="text-gray-600 font-semibold">Branch:</label>
-                <span class="text-gray-800 block">{{ userProfile?.branch || 'N/A' }}</span>
+                <span class="text-gray-800 block">{{ userProfile?.account?.branch || 'N/A' }}</span>
             </div>
 
             <div>
                 <label class="text-gray-600 font-semibold">Account Type:</label>
-                <span class="text-gray-800 block">{{ userProfile?.accountType || 'N/A' }}</span>
+                <span class="text-gray-800 block">{{ userProfile?.account?.accountType || 'N/A' }}</span>
             </div>
 
             <div>
                 <label class="text-gray-600 font-semibold">IFSC Code:</label>
-                <span class="text-gray-800 block">{{ userProfile?.ifscCode || 'N/A' }}</span>
+                <span class="text-gray-800 block">{{ userProfile?.account?.ifscCode || 'N/A' }}</span>
             </div>
         </div>
 
-        <button (click)="toggleUpdateForm()" type="button"
+        <!-- <button (click)="toggleUpdateForm()" type="button" [disabled]="true"
             class="mt-6 font-semibold cursor-pointer text-indigo-900 bg-blue-100 py-2 px-4 rounded-lg hover:bg-blue-200 transition duration-300 ease-in-out">Edit
             Profile
-        </button>
+        </button> -->
     </div>
 
     <div *ngIf="showUpdateForm" class="bg-white rounded-lg shadow-lg md:p-6 p-2 max-w-7xl">

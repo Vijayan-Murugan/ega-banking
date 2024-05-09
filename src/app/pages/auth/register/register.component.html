@@ -43,6 +43,17 @@
               </div>
             </div>
   
+            <div class="col-span-2">
+              <label for="pin" class="block text-sm font-bold mb-2">PIN: (4 digit only)</label>
+              <input formControlName="pin" type="password" id="pin" maxlength="4"
+                class="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-indigo-500" />
+              <div *ngIf="f.pin.invalid && f.pin.touched" class="text-red-500 text-sm mt-1">
+                <div *ngIf="f.pin.errors?.required">Pin is required.</div>
+                <div *ngIf="f.pin.errors?.minlength">Pin must be at least 4 characters long.</div>
+                <div *ngIf="f.pin.errors?.maxlength">Pin must be max 4 characters long.</div>
+              </div>
+            </div>
+
             <div class="col-span-1">
               <label for="password" class="block text-sm font-bold mb-2">Password:</label>
               <input formControlName="password" type="password" id="password"
@@ -75,8 +86,8 @@
         <h2 class="text-3xl font-semibold mb-6">Registration Successful!</h2>
         <p>Name: {{ registrationData.name }}</p>
         <p>Email: {{ registrationData.email }}</p>
-        <p>Account Number: {{ registrationData.accountNumber }}</p>
-        <p>Branch: {{ registrationData.branch }}</p>
+        <p>Account Number: {{ registrationData?.account?.accountNumber }}</p>
+        <p>Branch: {{ registrationData?.account?.branch }}</p>
         <div class="mt-4 flex items-center justify-center">
           <a routerLink="/auth/login" type="button"
             class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

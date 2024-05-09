@@ -6,9 +6,11 @@
       </h1>
   
       <div class="nav-body w-full flex justify-end space-x-4 p-1">
-        <a *ngIf="!isLoggedIn()" routerLink="/auth/login"
+      <a *ngIf="!isLoggedIn()" [routerLink]="isLoginPage?'/auth/register':'/auth/login'"
+      (click)="isLoginPage = !isLoginPage"
           class="smallscreen border border-2 border-gray-500 hover:bg-gray-100 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
-          <i class="fas fa-sign-in-alt mr-1"></i> Login
+          <i class="fas fa-sign-in-alt mr-1"></i> 
+          {{isLoginPage?'Register':'Login'}}
         </a>
 
         <button *ngIf="isLoggedIn()"
